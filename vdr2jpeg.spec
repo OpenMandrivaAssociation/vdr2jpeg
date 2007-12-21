@@ -11,6 +11,7 @@ Group:		Video
 License:	LGPL
 URL:		http://www.deltab.de/vdr/vdr2jpeg.html
 Source:		http://www.deltab.de/vdr/%name-%version.tgz
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ffmpeg-devel >= 0.4.9-0.pre1.20060309
 
 %description
