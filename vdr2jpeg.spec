@@ -1,6 +1,6 @@
 
 %define name	vdr2jpeg
-%define version	0.0.11
+%define version	0.0.12
 %define rel	1
 
 Summary:	Grab JPEG images of VDR recordings
@@ -9,8 +9,8 @@ Version:	%version
 Release:	%mkrel %rel
 Group:		Video
 License:	LGPL
-URL:		http://www.deltab.de/vdr/vdr2jpeg.html
-Source:		http://www.deltab.de/vdr/%name-%version.tgz
+URL:		http://xxv.berlios.de/content/blogcategory/20/42/
+Source:		http://prdownload.berlios.de/xxv/vdr2jpeg-%{version}.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ffmpeg-devel >= 0.4.9-0.pre1.20060309
 
@@ -37,5 +37,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc HISTORY LIESMICH README
 %{_bindir}/%{name}
-
 
