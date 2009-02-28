@@ -1,6 +1,6 @@
 
 %define name	vdr2jpeg
-%define version	0.1.0
+%define version	0.1.1
 %define rel	1
 
 Summary:	Grab JPEG images of VDR recordings
@@ -11,8 +11,6 @@ Group:		Video
 License:	LGPL
 URL:		http://xxv.berlios.de/content/blogcategory/20/42/
 Source:		http://prdownload.berlios.de/xxv/vdr2jpeg-%{version}.tgz
-Patch0:		vdr2jpeg-0.1.0-gcc4.3.patch
-Patch1:		vdr2jpeg-0.1.0-ffmpeg-new-header-location.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ffmpeg-devel >= 0.4.9-0.pre1.20060309
 
@@ -23,11 +21,10 @@ designed as a little study to enhance xxv.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p0
 
 %build
-%make CXXFLAGS="%optflags -Wl,--as-needed -Wl,--no-undefined"
+export LIBS="%ldflags"
+%make CXXFLAGS="%optflags" STRIP=/bin/true
 
 %install
 rm -rf %{buildroot}
