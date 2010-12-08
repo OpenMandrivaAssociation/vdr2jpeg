@@ -1,7 +1,7 @@
 
 %define name	vdr2jpeg
 %define version	0.1.1
-%define rel	2
+%define rel	3
 
 Summary:	Grab JPEG images of VDR recordings
 Name:		%name
