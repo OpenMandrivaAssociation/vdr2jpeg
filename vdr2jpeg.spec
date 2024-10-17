@@ -9,7 +9,7 @@ Version:	%version
 Release:	%mkrel %rel
 Group:		Video
 License:	LGPL
-URL:		http://xxv.berlios.de/content/blogcategory/20/42/
+URL:		https://xxv.berlios.de/content/blogcategory/20/42/
 Source:		http://prdownload.berlios.de/xxv/vdr2jpeg-%{version}.tgz
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	ffmpeg-devel >= 0.4.9-0.pre1.20060309
